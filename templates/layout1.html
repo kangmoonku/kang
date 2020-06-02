@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<head>
+    {% if title %}
+      <title>Flask 블로그 - {{ title }}</title>
+    {% else %}
+      <title>Flask 블로그</title>
+    {% endif %}
+</head>
+<body>
+  <header>{% block head %}
+  	<nav>
+        <a href="/">지도 정보home</a>
+        <a href="http://www.naver.com">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+      <hr>{% endblock %}</header>
+      <p>으아아아아아</p>
+  {% block body %}{% endblock %}
+
+</body>
+</html>

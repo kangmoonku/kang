@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+ 
+{% block content %}
+<form action="/forward/" method="post">
+       <button name="forwardBtn" type="submit">Forward</button>      
+</form>
+<div>
+  <div>
+
+    {% for post in posts %}
+      <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content}}</p>
+        <div>
+          <p>{{ post.author.username }}</p>
+          <p>{{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
